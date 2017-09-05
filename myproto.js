@@ -2,6 +2,6 @@ function myProto(val) {
   this.userName = val;
 }
 
-myProto.prototype.write = function() {};
+myProto.prototype.work = function() {};
 
 module.exports = myProto;

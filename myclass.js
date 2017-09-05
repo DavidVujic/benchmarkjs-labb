@@ -3,7 +3,7 @@ class myClass {
     this.userName = val;
   }
 
-  write() {}
+  work() {}
 }
 
 module.exports = myClass;

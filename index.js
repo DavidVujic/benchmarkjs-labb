@@ -7,16 +7,21 @@ const suite = new Benchmark.Suite;
 
 suite.add('using class', function() {
   const x = new myClass('MrUser');
-  x.write();
-}).add('using proto', function() {
+  x.work();
+})
+.add('using proto', function() {
   const x = new myProto('MrUser');
-  x.write();
-}).add('using func', function() {
+  x.work();
+})
+.add('using func', function() {
   const x = myFunc('MrUser');
-  x.write();
-}).on('cycle', function(event) {
+  x.work();
+})
+.on('cycle', function(event) {
   console.log(String(event.target));
-}).on('complete', function() {
+})
+.on('complete', function() {
   const fastest = this.filter('fastest').map('name');
   console.log(`Fastest is ${fastest}`);
-}).run({'async': true});
+})
+.run({'async': true});

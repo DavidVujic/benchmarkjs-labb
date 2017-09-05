@@ -1,9 +1,11 @@
-function write() {}
+function work() {}
 
 function myFunc(val) {
   let userName = val;
 
-  return {write: write};
+  return {
+    work
+  };
 };
 
 module.exports = myFunc;
