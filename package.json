@@ -1,0 +1,15 @@
+{
+  "name": "benchmarkjs-labb",
+  "version": "1.0.0",
+  "description": "experimenting with benchmark",
+  "main": "index.js",
+  "author": "David Vujic",
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^2.1.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+
+}
