@@ -7,15 +7,15 @@ const suite = new Benchmark.Suite;
 
 suite.add('using class', function() {
   const x = new myClass('MrUser');
-  x.work();
+  x.work('run');
 })
 .add('using proto', function() {
   const x = new myProto('MrUser');
-  x.work();
+  x.work('run');
 })
 .add('using func', function() {
   const x = myFunc('MrUser');
-  x.work();
+  x.work('run');
 })
 .on('cycle', function(event) {
   console.log(String(event.target));

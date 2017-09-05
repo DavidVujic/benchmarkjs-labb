@@ -3,7 +3,9 @@ class myClass {
     this.userName = val;
   }
 
-  work() {}
+  work(action) {
+    this.currentAction = action;
+  }
 }
 
 module.exports = myClass;

@@ -2,9 +2,11 @@ function work() {}
 
 function myFunc(val) {
   let userName = val;
-
+  let currentAction;
   return {
-    work
+    work(action) {
+      currentAction = action;
+    }
   };
 };
 
