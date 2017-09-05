@@ -2,6 +2,7 @@ const Benchmark = require('benchmark');
 const myClass = require('./myclass.js');
 const myProto = require('./myproto.js');
 const myFunc = require('./myfunc.js');
+const myConstr = require('./myconstr.js');
 
 const suite = new Benchmark.Suite;
 
@@ -15,6 +16,10 @@ suite.add('using class', function() {
 })
 .add('using func', function() {
   const x = myFunc('MrUser');
+  x.work('run');
+})
+.add('using constr', function() {
+  const x = new myConstr('MrUser');
   x.work('run');
 })
 .on('cycle', function(event) {
