@@ -1,32 +1,49 @@
+const myClass = require('./myClass.js');
+const myClassExtended = require('./myClassExtended.js');
+const myFactoryFunc = require('./myFactoryFunc.js');
+
+const myFuncConstructor = require('./myFuncConstructor.js');
+const myFuncConstructorExtended = require('./myFuncConstructorExtended.js');
+const myProto = require('./myProto.js');
+const myProtoExtended = require('./myProtoExtended.js');
+
 const Benchmark = require('benchmark');
-const myClass = require('./myclass.js');
-const myProto = require('./myproto.js');
-const myFunc = require('./myfunc.js');
-const myConstr = require('./myconstr.js');
 
 const suite = new Benchmark.Suite;
 
-suite.add('using class', function() {
-  const x = new myClass('MrUser');
-  x.work('run');
-})
-.add('using proto', function() {
-  const x = new myProto('MrUser');
-  x.work('run');
-})
-.add('using func', function() {
-  const x = myFunc('MrUser');
-  x.work('run');
-})
-.add('using constr', function() {
-  const x = new myConstr('MrUser');
-  x.work('run');
-})
-.on('cycle', function(event) {
+function myEventCallback(val) {}
+
+const myEvents = {
+  done: () => {}
+}
+
+suite.add('class with callback', function() {
+  const x = myClass('MrUser');
+  x.work();
+}).add('extended class with events', function() {
+  const x = myClassExtended('MrUser');
+  x.on('done', myEventCallback);
+  x.work();
+}).add('factory function with callback', function() {
+  const x = myFactoryFunc('MrUser', myEvents);
+  x.work();
+}).add('function constructor with callback', function() {
+  const x = myFuncConstructor('MrUser', myEvents);
+  x.work();
+}).add('extended function constructor with events', function() {
+  const x = myFuncConstructorExtended('MrUser');
+  x.on('done', myEventCallback);
+  x.work();
+}).add('prototype function with events', function() {
+  const x = myProto('MrUser');
+  x.work();
+}).add('extended prototype function with events', function() {
+  const x = myProtoExtended('MrUser');
+  x.on('done', myEventCallback);
+  x.work();
+}).on('cycle', function(event) {
   console.log(String(event.target));
-})
-.on('complete', function() {
+}).on('complete', function() {
   const fastest = this.filter('fastest').map('name');
   console.log(`Fastest is ${fastest}`);
-})
-.run({'async': true});
+}).run({'async': true});
