@@ -1,18 +1,18 @@
 const EventEmitter = require('events');
 const util = require('util');
 
-function myClass(name) {
+function MyClass(name) {
   this.userName = name;
 }
 
-myClass.prototype.work = function() {
+MyClass.prototype.work = function work() {
   this.emit('done', this.userName);
 };
 
-util.inherits(myClass, EventEmitter);
+util.inherits(MyClass, EventEmitter);
 
 function create(name) {
-  return new myClass(name);
+  return new MyClass(name);
 }
 
 module.exports = create;

@@ -1,7 +1,7 @@
 const EventEmitter = require('events');
 const util = require('util');
 
-class myClass {
+class MyClass {
   constructor(name) {
     this.userName = name;
   }
@@ -11,10 +11,10 @@ class myClass {
   }
 }
 
-util.inherits(myClass, EventEmitter);
+util.inherits(MyClass, EventEmitter);
 
 function create(name) {
-  return new myClass(name);
+  return new MyClass(name);
 }
 
 module.exports = create;

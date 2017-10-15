@@ -1,6 +1,6 @@
 const noops = require('./noops.js');
 
-class myClass {
+class MyClass {
   constructor(name, events) {
     this.userName = name;
     this.events = events;
@@ -11,8 +11,8 @@ class myClass {
   }
 }
 
-function create(name, events=noops) {
-  return new myClass(name, events);
+function create(name, events = noops) {
+  return new MyClass(name, events);
 }
 
 module.exports = create;

@@ -1,7 +1,7 @@
-function noop(){}
+function noop() {}
 
 const noops = {
-  done: noop
-}
+  done: noop,
+};
 
 module.exports = noops;

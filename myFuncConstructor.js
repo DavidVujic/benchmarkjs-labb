@@ -1,16 +1,16 @@
 const noops = require('./noops.js');
 
-function myClass(name, events) {
+function MyClass(name, events) {
   this.userName = name;
   this.events = events;
 
-  this.work = function () {
+  this.work = () => {
     this.events.done(this.userName);
   };
 }
 
-function create(name, events=noops) {
-  return new myClass(name, events);
+function create(name, events = noops) {
+  return new MyClass(name, events);
 }
 
 module.exports = create;
