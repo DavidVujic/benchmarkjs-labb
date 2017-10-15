@@ -14,7 +14,7 @@ Setup your editor or IDE:
 __.editorconfig__ is by default supported in Webstorm. Check out this page to find out how to enable .editorconfig in your favourite tool:
 http://editorconfig.org/
 
-__ESLint__ is code quality tool that analyzes code to find problematic patterns, also making sure code follow style guidelines (see the [Style guide](style-guide) section).
+__ESLint__ is code quality tool that analyzes code to find problematic patterns, also making sure code follow style guidelines (see the [Style guide](#style-guide) section).
 
 ### Style guide ###
 This project is using the AirBnb JavaScript style guide as described here:
