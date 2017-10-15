@@ -15,6 +15,12 @@ __.editorconfig__: by default supported in Webstorm. Check out this page to find
 http://editorconfig.org/
 
 __JavaScript & Node__: if necessary, select _ECMAScript 6_ or equivalent for _JavaScript_. Select the correct _Node version_ to be used (see package.json) in your editor or IDE. In _Webstorm_, you will find it in _Settings -> Languages & frameworks_.
+```json 
+// Example: look for this section in the package.json file
+"engines": {
+    "node": ">=8.0.0"
+  }
+```
 
 __ESLint__: a code quality tool that analyzes code to find problematic patterns, also making sure code follows style guidelines (see the [Style guide](#style-guide) section).
 
