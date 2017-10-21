@@ -1,8 +1,8 @@
 const EventEmitter = require('events');
-const util = require('util');
 
-class MyClass {
+class MyClass extends EventEmitter {
   constructor(name) {
+    super();
     this.userName = name;
   }
 
@@ -10,8 +10,6 @@ class MyClass {
     this.emit('done', this.userName);
   }
 }
-
-util.inherits(MyClass, EventEmitter);
 
 function create(name) {
   return new MyClass(name);

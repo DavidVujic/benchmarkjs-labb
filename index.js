@@ -12,41 +12,41 @@ const Benchmark = require('benchmark');
 
 const suite = Benchmark.Suite('Which one is fastest?');
 
-function myEventCallback() {}
+function myEventListener() {}
 
-const myEvents = {
+const myCallbacks = {
   done: () => {},
 };
 
 suite.add('class with callback', () => {
-  const x = myClass('MrUser');
+  const x = myClass('MrUser', myCallbacks);
   x.work();
 })
   .add('extended class with events', () => {
     const x = myClassExtended('MrUser');
-    x.on('done', myEventCallback);
+    x.on('done', myEventListener);
     x.work();
   })
   .add('factory function with callback', () => {
-    const x = myFactoryFunc('MrUser', myEvents);
+    const x = myFactoryFunc('MrUser', myCallbacks);
     x.work();
   })
   .add('function constructor with callback', () => {
-    const x = myFuncConstructor('MrUser', myEvents);
+    const x = myFuncConstructor('MrUser', myCallbacks);
     x.work();
   })
   .add('extended function constructor with events', () => {
     const x = myFuncConstructorExtended('MrUser');
-    x.on('done', myEventCallback);
+    x.on('done', myEventListener);
     x.work();
   })
-  .add('prototype function with events', () => {
-    const x = myProto('MrUser');
+  .add('prototype function with callback', () => {
+    const x = myProto('MrUser', myCallbacks);
     x.work();
   })
   .add('extended prototype function with events', () => {
     const x = myProtoExtended('MrUser');
-    x.on('done', myEventCallback);
+    x.on('done', myEventListener);
     x.work();
   })
   .on('cycle', (event) => {
