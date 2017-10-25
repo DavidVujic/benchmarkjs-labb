@@ -1,4 +1,4 @@
-const EventEmitter = require('events');
+const EventEmitter = require('eventemitter3');
 
 class MyClass extends EventEmitter {
   constructor(name) {
