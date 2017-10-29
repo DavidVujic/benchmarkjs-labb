@@ -1,13 +1,13 @@
-const noops = require('./noops.js');
+const noops = require('../noops.js');
 
 function MyClass(name, events) {
   this.userName = name;
   this.events = events;
-}
 
-MyClass.prototype.work = function work() {
-  this.events.done(this.userName);
-};
+  this.work = () => {
+    this.events.done(this.userName);
+  };
+}
 
 function create(name, events = noops) {
   return new MyClass(name, events);

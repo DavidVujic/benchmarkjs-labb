@@ -1,4 +1,4 @@
-const noops = require('./noops.js');
+const noops = require('../noops.js');
 
 function create(name, events = noops) {
   return {
