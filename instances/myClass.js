@@ -1,3 +1,5 @@
+'use strict';
+
 const noops = require('../noops.js');
 
 class MyClass {

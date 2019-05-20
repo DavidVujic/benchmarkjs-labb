@@ -1,10 +1,11 @@
-/* eslint-disable no-console */
+'use strict';
+
+const Benchmark = require('benchmark');
+
 const myClass = require('./instances/myClass.js');
 const myFactoryFunc = require('./instances/myFactoryFunc.js');
 const myFuncConstructor = require('./instances/myFuncConstructor.js');
 const myProto = require('./instances/myProto.js');
-
-const Benchmark = require('benchmark');
 
 const suite = Benchmark.Suite('Which one is fastest?');
 

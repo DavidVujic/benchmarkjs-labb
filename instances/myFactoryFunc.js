@@ -1,3 +1,5 @@
+'use strict';
+
 const noops = require('../noops.js');
 
 function create(name, events = noops) {

@@ -1,9 +1,9 @@
-/* eslint-disable no-console */
+'use strict';
+
+const Benchmark = require('benchmark');
 const myClassExtended = require('./inheritance/myClassExtended.js');
 const myFuncConstructorExtended = require('./inheritance/myFuncConstructorExtended.js');
 const myProtoExtended = require('./inheritance/myProtoExtended.js');
-
-const Benchmark = require('benchmark');
 
 const suite = Benchmark.Suite('Which one is fastest?');
 

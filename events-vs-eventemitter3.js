@@ -1,8 +1,8 @@
-/* eslint-disable no-console */
-const myClassEvents = require('./eventemitter3/myClassEvents.js');
-const myClassEventEmitter3 = require('./eventemitter3/myClassEventEmitter3.js');
+'use strict';
 
 const Benchmark = require('benchmark');
+const myClassEvents = require('./eventemitter3/myClassEvents.js');
+const myClassEventEmitter3 = require('./eventemitter3/myClassEventEmitter3.js');
 
 const suite = Benchmark.Suite('Which one is fastest?');
 
