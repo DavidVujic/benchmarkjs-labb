@@ -18,7 +18,7 @@ __JavaScript & Node__: if necessary, select _ECMAScript 6_ or equivalent for _Ja
 ```json 
 // Example: look for this section in the package.json file
 "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.15.3"
   }
 ```
 
