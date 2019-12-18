@@ -1,5 +1,3 @@
-'use strict';
-
 const Benchmark = require('benchmark');
 
 const myClassWithStrict = require('./strict/withstrict.js');

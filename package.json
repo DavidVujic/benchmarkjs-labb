@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "benchmark": "2.x",
-    "eventemitter3": "3.x"
+    "eventemitter3": "4.x"
   },
   "devDependencies": {
-    "eslint": "5.x",
-    "eslint-config-airbnb-base": "13.x",
+    "eslint": "6.x",
+    "eslint-config-airbnb-base": "14.x",
     "eslint-plugin-import": "2.x",
-    "eslint-plugin-node": "9.x"
+    "eslint-plugin-node": "10.x"
   },
   "engines": {
     "node": ">=10.15.3"

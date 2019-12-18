@@ -1,5 +1,3 @@
-'use strict';
-
 const Benchmark = require('benchmark');
 const myClassExtended = require('./inheritance/myClassExtended.js');
 const myFuncConstructorExtended = require('./inheritance/myFuncConstructorExtended.js');

@@ -1,5 +1,3 @@
-'use strict';
-
 const Benchmark = require('benchmark');
 const myClassEvents = require('./eventemitter3/myClassEvents.js');
 const myClassEventEmitter3 = require('./eventemitter3/myClassEventEmitter3.js');
